@@ -1,0 +1,183 @@
+.project {
+  padding: 68px 0 34px;
+
+  &__heading {
+    @include TT700;
+    font-size: 24px;
+    line-height: 31px;
+    color: $black;
+    margin-bottom: 12px;
+  }
+}
+
+.project__item {
+  min-height: 300px
+}
+
+.project__descr {
+  @include roboto400;
+  margin: 0;
+  margin-bottom: auto;
+  padding-bottom: 5px;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+}
+
+.project__descr1024 {
+  @include roboto400;
+  display: none;
+  margin: 0;
+  margin-bottom: auto;
+  padding-bottom: 5px;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+}
+
+.project__card {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin-bottom: 12px;
+  }
+
+  .project__date {
+    @include roboto400;
+    font-size: 12px;
+    line-height: 22px;
+    color: $grey;
+    display: inline-block;
+    position: relative;
+    padding-left: 19px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-image: url('../img/calendar.svg');
+      background-repeat: no-repeat;
+      top: 4px;
+      left: 1px;
+    }
+  }
+}
+
+.project__type {
+  @include roboto400;
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  padding: 6px 14px;
+  background-color: $black;
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+}
+
+.project__list {
+  display: grid;
+  grid-template-columns: 190px 190px 190px 1fr 1fr;
+  grid-template-rows: minmax(300px, auto);
+  gap: $gap;
+
+  .type__fuji {
+    grid-column: 4 / 6;
+  }
+
+  .type__oblivion {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .project__card-big {
+    position: relative;
+    min-height: 100%;
+    padding: 22px 22px 22px 29px;
+    display: flex;
+    flex-direction: column;
+
+    picture {
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 0;
+
+      img {
+        height: 100%;
+        width: 100%
+        ;
+      }
+    }
+
+    .project__date {
+      @include roboto400;
+      font-size: 12px;
+      line-height: 22px;
+      color: $white;
+      display: inline-block;
+      position: relative;
+      padding-left: 19px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-image: url('../img/calendar-white.svg');
+        background-repeat: no-repeat;
+        top: 4px;
+        left: 1px;
+      }
+    }
+
+    .project__subtitile {
+      @include TT700;
+      max-width: 50%;
+      margin-bottom: 6px;
+      font-size: 24px;
+      line-height: 24px;
+      color: $white;
+    }
+
+    .project__descr-big {
+      color: $white;
+      max-width: 51%;
+      margin-bottom: auto;
+    }
+
+    .project__btn {
+      @include roboto700;
+      max-width: max-content;
+      text-align: left;
+      margin-bottom: 8px;
+      padding: 14px 21px;
+      font-size: 16px;
+      line-height: 19px;
+      color: $white;
+      border: 3px solid $orange;
+      outline: none;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+
+    .project__btn:focus {
+      background-color: $orange-dark;
+    }
+
+    .project__btn:hover {
+      background-color: $orange;
+    }
+
+    .project__btn:active {
+      background-color: $red-dark;
+      border-color: $red-dark;
+    }
+  }
+}
+

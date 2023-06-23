@@ -1,0 +1,12 @@
+@import "./mixins/burger";
+@import "./mixins/font-face";
+@import "./mixins/font-mix";
+
+@mixin pseudo {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}

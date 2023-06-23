@@ -1,0 +1,192 @@
+.header {
+  background-color: $black;
+  padding: 30px 0 21px;
+}
+
+.header__container {
+  position: relative;
+}
+
+.header__logo {
+  // width: 190px;
+  // height: 30px;
+  margin-top: -9px;
+  margin-right: 140px;
+  align-self: center;
+}
+
+.header__nav {
+  margin-right:  auto;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+  .nav__item {
+
+    .nav__link {
+      @include TT400;
+
+      position: relative;
+      font-size: 16px;
+      line-height: 21px;
+      color: $white;
+      transition: color 0.3s ease-in-out;
+      z-index: 2;
+      outline: none;
+    }
+
+    .nav__link:focus::before {
+      opacity: 1;
+    }
+
+    .nav__link::before {
+      @include pseudo;
+      top: -3px;
+      right: -5px;
+      bottom: -3px;
+      left: -3px;
+      background-color: $orange-dark;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .nav__link:hover {
+      color: $orange;
+    }
+
+    .nav__link:active {
+      color: $red-dark;
+    }
+
+    .nav__link:active::before {
+      opacity: 0;
+    }
+  }
+
+  .nav__item {
+    margin-right: 79px;
+  }
+
+  .nav__item--last {
+    margin-right: 0;
+  }
+}
+
+.search-btn {
+  outline: none;
+
+  svg {
+    fill: $white;
+    transition: fill 0.3s ease-in-out;
+  }
+}
+
+.search-btn:focus svg {
+  fill: $orange-dark;
+}
+
+.search-btn:hover svg {
+  fill: $orange;
+}
+
+.search {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  z-index: 10;
+  transform: translateY(-120%);
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.search--active {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.search-form {
+  padding-left: 10px;
+  display: flex;
+  background-color: $black;
+}
+
+.search-form__input {
+  background-color: $black;
+  width: 169px;
+  border-bottom: 1px solid $white-dark;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  color: $white-dark;
+}
+
+.search-form__input:focus {
+  border-color: $orange;
+}
+
+.search-form__input:hover {
+  border-color: $orange;
+}
+
+.search-form__input:active {
+  border-color: $red-dark;
+}
+
+.search-form__input::placeholder {
+  @include TT400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $white-dark;
+}
+
+.search-btn--closed {
+  position: relative;
+
+  svg {
+    fill: #808080;
+  }
+
+  &::before {
+    @include pseudo;
+    background-color: $black;
+    z-index: -1;
+  }
+}
+
+.nav__phone-link {
+  @include TT400;
+  display: none;
+  max-width: max-content;
+  position: relative;
+  padding-left: 17px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $orange;
+  outline: none;
+  white-space: nowrap;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../img/phone.svg');
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    top: -4px;
+    left: -4px;
+  }
+}
+
+
+.burger-wrap {
+  display: none;
+}
+
+.burger-close {
+  display: none;
+}

@@ -1,0 +1,51 @@
+<section class="contacts" id="contacts">
+  <div class="container">
+    <h2 class="contacts__heading heading-reset">
+      Контакты
+    </h2>
+    <div class="contacts__grid">
+      <div class="map-wrap">
+        <div class="map__descr map-open">
+          <h3 class="map__heading heading-reset">
+            Студия «High pass»
+          </h3>
+          <div class="adresses-wrap">
+            <address class="map__address">
+              107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+            </address>
+            <a href="tel:+749542423532" class="map__phone">+7 495 424-23-532</a>
+          </div>
+          <button class="btn-reset map__close" id="map-close" aria-label="Закрыть контакты">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="10" cy="10" r="10"/>
+              <rect x="6.20715" y="5.5" width="12" height="1" transform="rotate(45 6.20715 5.5)" fill="white"/>
+              <rect x="5.59143" y="13.9854" width="12" height="1" transform="rotate(-45 5.59143 13.9854)" fill="white"/>
+              </svg>
+          </button>
+        </div>
+        <div id="map" class="map">
+        </div>
+      </div>
+      <div class="contacts-wrapper">
+        <h3 class="heading-reset form-heading contacts-form-heading">
+          Оставить заявку
+        </h3>
+        <p class="form-descr">
+          Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату съёмки или другого мероприятия
+        </p>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="contacts-form">
+          <label class="contacts-form__label">
+            <input type="text" name="Имя" class="input-reset contacts-form__input name" placeholder="Имя">
+          </label>
+          <label class="contacts-form__label">
+            <input type="Email" name="Email" class="input-reset contacts-form__input email" placeholder="Email">
+          </label>
+          <label class="contacts-form__label">
+            <textarea name="komment" placeholder="Комментарий" class="contacts-form__textarea"></textarea>
+          </label>
+          <button class="btn-reset contacts-form__btn btn-orange">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

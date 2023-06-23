@@ -1,0 +1,90 @@
+.about {
+  background-color: $black;
+  padding: 30px 0px 50px;
+}
+
+.about__heading {
+  @include TT700;
+  margin-bottom: 6px;
+  font-size: 24px;
+  line-height: 31px;
+  color: $white;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap;
+}
+
+.about__descr {
+  @include roboto400;
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  color: $grey-light;
+}
+
+.about__right {
+  img {
+    margin-bottom: 16px;
+  }
+}
+
+.form-heading {
+  @include TT400;
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 22px;
+  color: $white;
+}
+
+.about-form__input {
+  @include roboto400;
+  padding: 15px 23px;
+  background-color: $grey-dark;
+  min-width: 473px;
+  margin-right: 26px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 19px;
+  color: $white;
+  outline: none;
+  border: 1px solid $grey-dark;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.about-form__input:focus {
+  border-color: $orange;
+}
+
+.about-form__input:hover::placeholder {
+  color: $orange;
+}
+
+.about-form__input::placeholder {
+  @include roboto400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $grey-light;
+  transition: color 0.3s ease-in-out;
+}
+
+.about-form {
+
+  .about-form__label {
+    position: relative;
+  }
+
+  .just-validate-error-label {
+    @include roboto400;
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    font-size: 9px;
+    line-height: 11px;
+  }
+  .just-validate-error-field {
+    border: 1px solid $pink;
+  }
+}

@@ -1,0 +1,75 @@
+.hero {
+  padding: 41px 0 66px;
+}
+
+.hero__left {
+  display: flex;
+  position: relative;
+  width: calc((100% - $gap) / 2);
+  // min-height: 630px;
+  margin-right: $gap;
+  padding: 40px 145px 60px 60px;
+  background-image: url('../img/hero1-1920.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  .hero__stick {
+    @include roboto400;
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    padding: 7px 14px;
+    font-size: 14px;
+    line-height: 16px;
+    background-color: $black;
+    color: $white;
+  }
+
+  .hero__content {
+    margin-top: auto;
+
+    .hero__author {
+      @include roboto400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $white;
+    }
+
+    .hero__title {
+      @include TT700;
+      margin-bottom: 21px;
+      font-size: 36px;
+      line-height: 104%;
+      color: $white;
+    }
+  }
+}
+
+.hero__right {
+  width: calc((100% - $gap) / 2);
+
+  .hero__heading {
+    @include TT700;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 104%;
+    color: $black;
+  }
+
+  .hero__grid {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-auto-rows: minmax(257px, auto);
+
+    img {
+      height: 100%;
+    }
+
+    .hero__2 {
+      min-height: 300px;
+      grid-column: 1 / 3;
+    }
+  }
+}
